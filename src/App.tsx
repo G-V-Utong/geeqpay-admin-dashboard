@@ -3,33 +3,59 @@ import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
+  Outlet
 } from "react-router-dom";
 import Users from "./users/Users";
 import Products from "./products/Products";
+import Navbar from "./components/navbar/Navbar";
+import Menu from "./components/menu/Menu";
+import Footer from "./components/footer/Footer";
+import './styles/global.scss'
 
 function App() {
 
+  const Layout = () => {
+    return (
+      <div className="main">
+        <Navbar/>
+        <div className="container">
+          <div className="menuContainer">
+            <Menu/>
+          </div>
+          <div className="contentContainer">
+            <Outlet/>
+          </div>
+        </div>
+        <Footer/>
+      </div>
+    )
+  }
+
   const router = createBrowserRouter([
     {
-      path: "/",
-      element: (
-        <Home/>
-      ),
-    },
-    {
-      path: "users",
-      element: (
-        <Users/>
-    )
-    },
-    {
-      path: "products",
-      element: (
-        <Products/>
-    )
-    },
+      path:"/",
+      element:<Layout/>,
+      children:[
+        {
+          path: "/",
+          element: (
+            <Home/>
+          ),
+        },
+        {
+          path: "users",
+          element: (
+            <Users/>
+        )
+        },
+        {
+          path: "products",
+          element: (
+            <Products/>
+        )
+        },
+      ]
+    }
   ]);
 
   return <RouterProvider router={router} />
