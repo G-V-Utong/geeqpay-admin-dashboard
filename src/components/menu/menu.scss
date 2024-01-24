@@ -1,3 +1,51 @@
 .menu-item {
     background-color: aqua;
 }
+
+.nav-text.active {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 70px;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 70px;
+    width: 20;
+    transition: all 0.5s;
+    transform: translateX(-10px);
+}
+
+.menuTitle.active {
+    padding: 15px;
+    font-weight:500;
+    visibility: visible;
+}
+
+.menuTitle {
+    visibility: hidden;
+}
+
+.itemList{
+    display: flex;
+    
+    >span {
+        display: none;
+    }
+}
+
+.itemList.active{
+    display: flex;
+    gap: 10px;
+    
+    >span {
+        display:contents;
+    }
+}

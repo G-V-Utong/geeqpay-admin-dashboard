@@ -9,15 +9,15 @@ import Footer from "./components/footer/Footer";
 import "./styles/global.scss";
 import { useState } from "react";
 
-function App(show:any) {
-  const [ showNav, setShowNav ] = useState(false)
+function App() {
+  // const [ showNav, setShowNav ] = useState(false)
 
   const Layout = () => {
     return (
      <div className="layout">
        <div className="main">
-        <div className={show? 'menuContainer active': 'menuContainer' }>
-          <Menu show = {showNav}/>
+        <div className="">
+          <Menu/>
         </div>
         <div className="container">
           <div className="navContainer">

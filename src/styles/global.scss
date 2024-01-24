@@ -26,12 +26,13 @@ a {
 }
 
 .menuContainer {
-  width: 80ppx;
+  width: 80px;
   padding: 20px 20px;
   border-right: 1px solid $border-main;
   height: 100vh;
   float: left;
-  transition: all 1s;
+  transition: all 0.4s;
+  
 }
 
 .menuContainer.active {
@@ -43,6 +44,7 @@ a {
   background-color: $main-bg;
   border-bottom: 1px solid $border-main;
   height: 70px;
+  
 }
 
 .contentContainer {
