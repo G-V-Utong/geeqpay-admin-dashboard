@@ -1,7 +1,11 @@
+@import "./variables.scss";
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: $main-bg;
 }
 
 a {
@@ -11,4 +15,37 @@ a {
 
 .main{
   font-family: "Inter", sans-serif;
+  // background-color: $main-bg;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.menuContainer {
+  width: 80ppx;
+  padding: 20px 20px;
+  border-right: 1px solid $border-main;
+  height: 100vh;
+  float: left;
+  transition: all 1s;
+}
+
+.menuContainer.active {
+  width: 250px;
+}
+
+.navContainer {
+  padding: 18px 20px;
+  background-color: $main-bg;
+  border-bottom: 1px solid $border-main;
+  height: 70px;
+}
+
+.contentContainer {
+  padding: 5px 20px;
+  width: 100%;
 }
