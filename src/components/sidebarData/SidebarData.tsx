@@ -3,7 +3,7 @@ export const SidebarData = [
     {
         title: 'Dashboard',
         path: '/',
-        icon: '/public/categorydashboard-menu.svg',
+        icon: 'categorydashboard-menu.svg',
         cName: 'nav-text'
     },
     {
@@ -32,3 +32,23 @@ export const SidebarData = [
     }
 ]
 
+export const SettingsData = [
+    {
+        title: 'Analytics',
+        path: '/',
+        icon: '/public/arrow-right.svg',
+        cName: 'nav-text'
+    },
+    {
+        title: 'Settings',
+        path: '/',
+        icon: '/public/setting-2.svg',
+        cName: 'nav-text'
+    },
+    {
+        title: 'Logout',
+        path: '/',
+        icon: '/public/logout.svg',
+        cName: 'nav-text'
+    },
+]
