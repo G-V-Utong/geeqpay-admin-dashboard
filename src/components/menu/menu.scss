@@ -1,5 +1,13 @@
-.menu-item {
-    background-color: aqua;
+@import "../../styles/variables.scss";
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid $border-main;
+}
+
+.logo {
+    padding: 20px 20px;
 }
 
 .nav-text.active {
@@ -9,6 +17,11 @@
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 70px;
+
+    &:hover{
+        background-color: $hover;
+        border: 15px;
+    }
 }
 
 .nav-text {
@@ -21,6 +34,11 @@
     width: 20;
     transition: all 0.5s;
     transform: translateX(-10px);
+
+    &:hover{
+        background-color: $hover;
+        border-radius: 15px;
+    }
 }
 
 .menuTitle.active {
@@ -44,6 +62,7 @@
 .itemList.active{
     display: flex;
     gap: 10px;
+    background-color: transparent;
     
     >span {
         display:contents;
