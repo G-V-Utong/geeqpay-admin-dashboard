@@ -7,6 +7,35 @@
   align-items: center;
   height: 100%;
 
+  .dropDown {
+    border: none;
+    border-radius: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .myPlaceholderClassName {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .myMenuClassName {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #dadddd;
+    color: #26282c;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .myArrowClassName{
+    visibility: hidden;
+  }
+
   .logo {
     padding: 0;
     > h1 {
@@ -54,6 +83,7 @@
     .date {
       display: flex;
       gap: 10px;
+      cursor: pointer;
 
       > p {
         font-family: Inter;
@@ -67,6 +97,7 @@
     .notification {
       width: 40px;
       height: 40px;
+      cursor: pointer;
 
       .bell {
         display: flex;
@@ -87,6 +118,7 @@
       gap: 12px;
       border-radius: 28px;
       border: 1px solid #dadddd;
+      cursor: pointer;
 
       .userProfileText {
         > span {

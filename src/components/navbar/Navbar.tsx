@@ -1,7 +1,16 @@
 import "./navbar.scss";
-import { CiSearch } from "react-icons/ci";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 const Navbar = () => {
+  const options = [
+    'Your Profile', 'Add account', 'Your products', 'Your stars'
+  ];
+
+  const placeholder = [
+    'Justin Bergson',
+  'Justin@gmail.com'
+  ]
   return (
     <div className="navbar">
       <div className="logo">
@@ -73,7 +82,7 @@ const Navbar = () => {
           <img src="/public/Rectangle 1061.png" alt="profile picture" />
           <div className="userProfileText">
             <span>Justin Bergson</span>
-            <p>Justin@gmail.com</p>
+            <Dropdown controlClassName="dropDown" placeholderClassName='myPlaceholderClassName' menuClassName='myMenuClassName' arrowClassName='myArrowClassName' options={options} placeholder='Justin@gmail.com'/>
           </div>
           <svg
             width="20"
