@@ -45,10 +45,15 @@
     padding: 15px;
     font-weight:500;
     visibility: visible;
+
+    &:hover{
+        color: $main-color;
+    }
 }
 
 .menuTitle {
     visibility: hidden;
+    color: $soft-color;
 }
 
 .itemList{
