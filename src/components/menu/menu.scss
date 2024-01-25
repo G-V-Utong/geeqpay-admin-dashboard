@@ -14,9 +14,9 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 16px 8px 16px;
     list-style: none;
-    height: 50px;
+    height: 70px;
 
     &:hover{
         background-color: $hover;
@@ -28,15 +28,15 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 16px 8px 16px;
     list-style: none;
     height: 70px;
     width: 20;
-    // transition: all 0.5s;
+    transition: all 0.5s;
     transform: translateX(-10px);
 
     &:hover{
-        background-color: $hover;
+        
         border-radius: 15px;
     }
 }

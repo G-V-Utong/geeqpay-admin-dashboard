@@ -33,7 +33,7 @@ const Menu = () =>  {
 
     return (
       <>
-        <div className="sidebar">
+        <div className="sidebar" onClick={showSidebar}>
           <div className="logo">
             <img
               src="/VectorDashboard-logo.svg"
@@ -60,8 +60,7 @@ const Menu = () =>  {
                       to={item.path}
                       className={showNav ? `itemList active` : `itemList`}
                     >
-                      {/* {IconComponent} */}
-                      {/* <DashboardIcon/> */}
+                     <img src={`${item.icon}`} alt="logo" />
                       <span
                         className={showNav ? "menuTitle active" : "menuTitle"}
                       >
@@ -90,6 +89,7 @@ const Menu = () =>  {
                     >
                       {/* {IconComponent} */}
                       {/* <DashboardIcon/> */}
+                      <img src={`${item.icon}`} alt="logo" />
                       <span
                         className={showNav ? "menuTitle active" : "menuTitle"}
                       >
