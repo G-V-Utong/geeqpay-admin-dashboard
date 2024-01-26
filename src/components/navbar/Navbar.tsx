@@ -79,7 +79,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="userProfile">
-          <img src="/public/Rectangle 1061.png" alt="profile picture" />
+          <img src="https://s3-alpha-sig.figma.com/img/5c6e/40a4/337c46cfe4ecd1dc345b49beaa4279e3?Expires=1707091200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=V9VFkPdOEriOAxMveQNF8anFpZ4O4KjeEz~vs9hRZvQEFIo3uRzo2eI7aHPQiFQ5rBSo7H9ChMaCIeGcI1VDe~AsDo4pkKXslQ4a0dTJVmFbKPvHg8jFvbCzmqkgvrmVAuMRYez9hsqV3YKtRj0Njt~ccl5wu0ofNaIs5ilTROpPY6R6T3PuiAS6oJ7JVcOw065yL5mSLjSPR-GRfnFM61R~9RkGiuc5QJ0FDRygdzvUMWoeAA8fRyI2hsXHtPfDqEDl3iaBZS7lyQgnt-G50Ndwhqe7Vky4qHv2dGjbpqpIrIhVM1NDyMkHtgeeBE0RDio9HINzB7-IYAMMOiSXFw__" alt="profile picture" />
           <div className="userProfileText">
             <span>Justin Bergson</span>
             <Dropdown controlClassName="dropDown" placeholderClassName='myPlaceholderClassName' menuClassName='myMenuClassName' arrowClassName='myArrowClassName' options={options} placeholder='Justin@gmail.com'/>

@@ -30,6 +30,8 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    width: 236px;
+    left: -40%;
   }
 
   .myArrowClassName{
@@ -119,6 +121,13 @@
       border-radius: 28px;
       border: 1px solid #dadddd;
       cursor: pointer;
+
+      & img {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
 
       .userProfileText {
         > span {
