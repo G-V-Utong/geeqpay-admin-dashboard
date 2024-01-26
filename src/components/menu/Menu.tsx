@@ -60,7 +60,8 @@ const Menu = () =>  {
                       to={item.path}
                       className={showNav ? `itemList active` : `itemList`}
                     >
-                     <img src={`${item.icon}`} alt="logo" />
+                     {/* <img src={`${item.icon}`} alt="logo" /> */}
+                     {item.icon}
                       <span
                         className={showNav ? "menuTitle active" : "menuTitle"}
                       >
@@ -89,7 +90,8 @@ const Menu = () =>  {
                     >
                       {/* {IconComponent} */}
                       {/* <DashboardIcon/> */}
-                      <img src={`${item.icon}`} alt="logo" />
+                      {/* <img src={`${item.icon}`} alt="logo" /> */}
+                      {item.icon}
                       <span
                         className={showNav ? "menuTitle active" : "menuTitle"}
                       >
