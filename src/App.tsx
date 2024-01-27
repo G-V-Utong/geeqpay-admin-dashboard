@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Home from "./home/Home";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -59,3 +60,13 @@ function App() {
 }
 
 export default App;
+=======
+function App() {
+
+  return (
+    <div>Hello World</div>
+  )
+}
+
+export default App
+>>>>>>> f1754d4925e3e9cd00bb5f8168a5a218485a873d
