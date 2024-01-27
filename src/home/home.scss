@@ -5,6 +5,8 @@
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(180px, auto);
+    margin-left: 80px; /* Set the margin to accommodate the fixed sidebar */
+transition: margin-left 0.4s; /* Apply transition only to margin-left */
 
     .box {
         padding: 20px;

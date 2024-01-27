@@ -18,11 +18,21 @@ a {
   // background-color: $main-bg;
   display: flex;
 }
+.menuMain {
+  // position: fixed;
+  // z-index: 1; /* Stay on top */
+  // top: 0; /* Stay at the top */
+  // left: 0;
+  // width: 80px; /* Set the initial width */
+  // transition: width 0.4s; /* Apply transition only to width */
+}
 
 .container {
   display: flex;
   flex-direction: column;
   flex: 1;
+//   margin-left: 80px; /* Set the margin to accommodate the fixed sidebar */
+// transition: margin-left 0.4s; /* Apply transition only to margin-left */  
 }
 
 .menuContainer {

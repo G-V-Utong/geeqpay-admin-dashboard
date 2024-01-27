@@ -1,6 +1,8 @@
 import TopBox from '../components/topBox/TopBox'
 import BottomBox from '../components/bottomBox/ButtomBox'
 import './home.scss'
+import { useState } from 'react';
+import ChartBox from '../components/chartBox/ChartBox';
 
 const Home = () => {
   return (
@@ -8,10 +10,10 @@ const Home = () => {
       <div className="box box1">
         <TopBox/>
       </div>
-      <div className="box box2">Box2</div>
-      <div className="box box3">Box3</div>
-      <div className="box box4">Box4</div>
-      <div className="box box5">Box5</div>
+      <div className="box box2"><ChartBox/></div>
+      <div className="box box3"><ChartBox/></div>
+      <div className="box box4"><ChartBox/></div>
+      <div className="box box5"><ChartBox/></div>
       <div className="box box6">
         <BottomBox/>
       </div>

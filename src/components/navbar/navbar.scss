@@ -6,6 +6,8 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  margin-left: 80px; /* Set the margin to accommodate the fixed sidebar */
+transition: margin-left 0.4s; /* Apply transition only to margin-left */
 
   .dropDown {
     border: none;

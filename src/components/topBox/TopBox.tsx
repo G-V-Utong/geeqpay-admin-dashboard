@@ -80,23 +80,35 @@ export const data = {
       outerWidth: 30,
       borderRadius: 20,
       backgroundColor: "rgba(52, 202, 165, 0.10)",
-      hoverBackgroundColor: "#34CAA5"
+      hoverBackgroundColor: function(context: { chart: any; }) {
+        const chart = context.chart;
+        const {
+          ctx,
+          chartArea
+        } = chart;
+        if (!chartArea) {
+          return null;
+        }
+        return getGradient(ctx, chartArea, "rgba(52, 202, 165, 1)", "rgba(52, 202, 165, 0)");
+      }
     },
   ],
 };
 
-function getGradient(chart: {
-  ctx: any;
-  chartArea: { top: any; bottom: any; left: any; right: any };
-}) {
-  const {
-    ctx,
-    chartArea: { top, bottom },
-  } = chart;
-  const gradientSegment = ctx.createLinearGradient(top, bottom);
-  gradientSegment.addColorStop(0, "#34CAA5");
-  gradientSegment.addColorStop(1, "rgba(52, 202, 165, 0.00)");
-  return gradientSegment;
+const  getGradient = (ctx: { createLinearGradient: (arg0: number, arg1: any, arg2: number, arg3: any) => any; }, chartArea: { right: number; left: number; bottom: number; top: number; }, start_color: string, stop_color: string) => {
+  let width, height, gradient;
+  const chartWidth = chartArea.right - chartArea.left;
+  const chartHeight = chartArea.bottom - chartArea.top;
+  if (gradient === null || width !== chartWidth || height !== chartHeight) {
+    // Create the gradient because this is either the first render
+    // or the size of the chart has changed
+    width = chartWidth;
+    height = chartHeight;
+    gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+    gradient.addColorStop(0, stop_color);
+    gradient.addColorStop(1, start_color);
+  }
+  return gradient;
 }
 
 
@@ -141,13 +153,16 @@ const TopBox = () => {
           />
         </div>
       </div>
-      <div>
+      <div className="bar">
         <Bar
         options={chartOptions}
           style={{
+            
             backgroundColor: "white",
-            width: "100%",
+            width: 'inherit',
+            height: 'inherit',
             objectFit: "contain",
+            flex: "1",
           }}
           data={data}
         />

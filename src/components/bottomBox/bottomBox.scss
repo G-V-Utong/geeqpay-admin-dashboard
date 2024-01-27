@@ -49,6 +49,23 @@
         justify-self: start;
         width: 120px;
         background-color: white;
+
+        &__name {
+          width: 200px;
+          display:flex;
+        justify-self: start;
+        background-color: white;
+        > p {
+          margin-top: 16px;
+        font-family: "Plus Jakarta Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        color: #9ca4ab;
+        background-color: white;
+      }
+        }
         > p {
             margin-top: 16px;
           font-family: "Plus Jakarta Sans";
@@ -64,14 +81,95 @@
   .list {
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    height: 490px;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 12px;               /* width of the entire scrollbar */
+    }
     
-    .user{
-        >img {
-            width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        object-fit: cover;
-        }
+    &::-webkit-scrollbar-track {
+      background: #FAFAFA;        /* color of the tracking area */
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(193, 193, 193);    /* color of the scroll thumb */
+      border-radius: 20px;       /* roundness of the scroll thumb */
+    }
+    
+    .listBox {
+      
+      .listItem{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid #EDF2F6;;
+        .user{
+          display:flex;
+          justify-content: start;
+          align-items: center;
+          width: 200px;
+          background-color: white;
+          gap: 20px;
+          >img {
+              width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          object-fit: cover;
+          }
+          .username {
+            background-color: white;
+          }
+      }
+
+      .date {
+        display:flex;
+          justify-content: start;
+          align-items: center;
+          width: 120px;
+          background-color: white;
+            color: #737373;
+        
+      }
+      .amount{
+        display:flex;
+          justify-content: start;
+          align-items: center;
+          width: 120px;
+          background-color: white;
+      }
+
+      .status {
+        display:flex;
+          justify-content: start;
+          align-items: center;
+          width: 120px;
+          background-color: white;
+          color: #ED544E;
+          
+      }
+      .status-green {
+        display:flex;
+          justify-content: start;
+          align-items: center;
+          width: 120px;
+          background-color: white;
+          color: #34CAA5;
+      }
+      .invoice {
+        cursor: pointer;
+        display:flex;
+          justify-content: start;
+          align-items: center;
+          width: 120px;
+          background-color: white;
+          gap: 10px;
+      }
+      }
     }
   }
 }

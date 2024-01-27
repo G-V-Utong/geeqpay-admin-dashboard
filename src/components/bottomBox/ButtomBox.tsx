@@ -12,7 +12,7 @@ const ButtomBox = () => {
         </div>
       </div>
       <div className='topDealsLabels'>
-        <div className='topDealsLabels__names'><p>Name</p></div>
+        <div className='topDealsLabels__names__name'><p>Name</p></div>
         <div className='topDealsLabels__names'><p>Date</p></div>
         <div className='topDealsLabels__names'><p>Amount</p></div>
         <div className='topDealsLabels__names'><p>Status</p></div>
@@ -20,15 +20,18 @@ const ButtomBox = () => {
       </div>
       <div className='list'>
         {topDealUsers.map(user =>(
-            <div className='listItem' key={user.id}>
+            <div className='listBox'>
+              <div className='listItem' key={user.id}>
                 <div className="user">
                     <img src={user.img} alt="avatar" />
                     <span className="username">{user.username}</span>
                 </div>
                 <span className="date">{user.Date}</span>
                 <span className="amount">{user.amount}</span>
-                <span className="status">{user.status}</span>
+                <span className={user.status == 'Paid' ? "status-green": "status"}>
+                  {user.status}</span>
             <span className="invoice">{user.invoice} {user.view}</span>
+            </div>
             </div>
         ))}
       </div>
