@@ -20,10 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-<<<<<<< HEAD
   "include": ["src", "src/**/*.ts", "src/**/*.tsx", "/src/svg.d.ts", "src/**/*.svg"],
-=======
-  "include": ["src"],
->>>>>>> f1754d4925e3e9cd00bb5f8168a5a218485a873d
   "references": [{ "path": "./tsconfig.node.json" }]
 }
