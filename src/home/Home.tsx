@@ -1,4 +1,5 @@
 import TopBox from '../components/topBox/TopBox'
+import BottomBox from '../components/bottomBox/ButtomBox'
 import './home.scss'
 
 const Home = () => {
@@ -11,7 +12,9 @@ const Home = () => {
       <div className="box box3">Box3</div>
       <div className="box box4">Box4</div>
       <div className="box box5">Box5</div>
-      <div className="box box6">Box6</div>
+      <div className="box box6">
+        <BottomBox/>
+      </div>
       <div className="box box7">Box7</div>
     </div>
   )
