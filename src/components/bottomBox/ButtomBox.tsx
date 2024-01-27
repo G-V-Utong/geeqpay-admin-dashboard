@@ -16,7 +16,7 @@ const ButtomBox = () => {
         <div className='topDealsLabels__names'><p>Date</p></div>
         <div className='topDealsLabels__names'><p>Amount</p></div>
         <div className='topDealsLabels__names'><p>Status</p></div>
-        <div className='topDealsLabels__names'><p>Invoice</p></div>
+        <div className='topDealsLabels__names__invoice'><p>Invoice</p></div>
       </div>
       <div className='list'>
         {topDealUsers.map(user =>(
