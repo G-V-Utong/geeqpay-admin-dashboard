@@ -90,3 +90,45 @@
 .fill-none {
     fill: red;
 }
+
+.toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+    border-radius: 50px;
+    width: 46px;
+
+    .toggleDiv1 {
+        background-color: #34CAA5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+
+
+        & svg {
+            background-color: #34CAA5;
+            fill: #34CAA5;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .toggleDiv2 {
+        background-color: white;
+
+        & svg {
+            background-color: white;
+            fill: white;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+}
